@@ -12,20 +12,18 @@ const GridWrapper = styled.section`
 `;
 
 const Grid = styled.div`
-  padding: 0 5px;
-  max-width: calc(100% - 34px);
+  padding: 0 5%;
+  max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(3, 33%);
   gap: 0.5rem;
   transition: transform 0.4s linear;
   transform: rotate3d(4, 10, 7, var(--rotatedeg));
 
   & > * {
     transition: transform 0.4s linear;
-    &:nth-of-type(odd) {
-      transform: translate(0, calc(var(--columns-translate) * -1));
-    }
-    &:nth-of-type(even) {
+    transform: translate(0, calc(var(--columns-translate) * -1));
+    &:nth-of-type(3n + 2) {
       transform: translate(0, var(--columns-translate));
     }
   }

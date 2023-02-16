@@ -195,13 +195,6 @@ const videos: VideosType[] = [
     title: "Now That's What I Call Riddim",
     link: "https://www.youtube.com/watch?v=cU5_TzSBkvg",
   },
-  {
-    image:
-      "https://i.ytimg.com/vi/EnYmqdQA73s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdDrQijpubYQNFFd-nvneLpiRdxQ",
-    author: "CloZee",
-    title: "Sunset Dreamtempo Set",
-    link: "https://www.youtube.com/watch?v=EnYmqdQA73s",
-  },
 ];
 
 export default videos;
