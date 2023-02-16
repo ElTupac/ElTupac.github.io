@@ -1,9 +1,7 @@
+import HeroSection from "./sections/hero/HeroSection";
+
 function App() {
-  return (
-    <div>
-      <p>cleaning</p>
-    </div>
-  );
+  return <HeroSection />;
 }
 
 export default App;
