@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { useEffect } from "react";
+import AccountPhrase from "../../components/AccountPhrase";
 import clamp from "../../utils/clampNumber";
 import videos from "../../utils/constant/videos";
 import VideoElement from "./VideoElement";
@@ -75,7 +76,9 @@ const VideosGrid = () => {
 
   return (
     <GridWrapper>
-      <Overlay />
+      <Overlay>
+        <AccountPhrase />
+      </Overlay>
       <Grid>
         {videos.map((video) => (
           <VideoElement key={video.link} video={video} />
