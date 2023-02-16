@@ -29,7 +29,7 @@ const VideoWrapper = styled.a`
     }
 
     & img {
-      max-width: 100%;
+      width: 100%;
     }
   }
 `;

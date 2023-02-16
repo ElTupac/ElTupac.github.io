@@ -16,8 +16,18 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 25%);
   gap: 0.5rem;
-  transition: transform 0.3s linear;
+  transition: transform 0.4s linear;
   transform: rotate3d(4, 10, 7, var(--rotatedeg));
+
+  & > * {
+    transition: transform 0.4s linear;
+    &:nth-of-type(odd) {
+      transform: translate(0, calc(var(--columns-translate) * -1));
+    }
+    &:nth-of-type(even) {
+      transform: translate(0, var(--columns-translate));
+    }
+  }
 `;
 
 const Overlay = styled.div`
@@ -28,26 +38,6 @@ const Overlay = styled.div`
   z-index: 2;
   background-color: #1a1a1a;
 `;
-
-const Column = styled.div`
-  position: relative;
-
-  & .inner-column {
-    transition: transform 0.3s linear;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-  }
-
-  &:nth-of-type(odd) .inner-column {
-    transform: translate(0, calc(var(--columns-translate) * -1));
-  }
-  &:nth-of-type(even) .inner-column {
-    transform: translate(0, var(--columns-translate));
-  }
-`;
-
-const range = [0, 1, 2, 3];
 
 const VideosGrid = () => {
   useEffect(() => {
@@ -63,12 +53,10 @@ const VideosGrid = () => {
       };
     };
     const storeScroll = () => {
-      let perc =
-        (window.scrollY / (document.body.clientHeight - window.innerHeight)) *
-        100;
+      let perc = (window.scrollY / window.innerHeight) * 110;
       const cssValues = {
         "--scrollpos": perc,
-        "--columns-translate": `${clamp((50 - perc) / 8, 0, 15).toFixed(1)}%`,
+        "--columns-translate": `${clamp(50 - perc, 0, 100).toFixed(1)}%`,
         "--rotatedeg": `${clamp(0.9 * (50 - perc), 0, 90).toFixed(0)}deg`,
         "--overlaysize": `${clamp(100 - perc * 5, 0, 100).toFixed(0)}%`,
       };
@@ -89,14 +77,8 @@ const VideosGrid = () => {
     <GridWrapper>
       <Overlay />
       <Grid>
-        {range.map((i) => (
-          <Column key={i}>
-            <div className="inner-column">
-              {videos.map((video) => (
-                <VideoElement video={video} key={video.link} />
-              ))}
-            </div>
-          </Column>
+        {videos.map((video) => (
+          <VideoElement key={video.link} video={video} />
         ))}
       </Grid>
     </GridWrapper>
