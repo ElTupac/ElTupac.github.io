@@ -11,20 +11,27 @@ const GridWrapper = styled.section`
 const Grid = styled.div`
   padding: 0 5%;
   max-width: 100%;
+  gap: 0.5rem;
+  transition: transform 0.4s linear;
+  transform: rotate3d(4, 10, 7, var(--rotatedeg));
   display: grid;
   grid-template-columns: repeat(3, 33%);
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 50%);
   }
-  gap: 0.5rem;
-  transition: transform 0.4s linear;
-  transform: rotate3d(4, 10, 7, var(--rotatedeg));
 
   & > * {
     transition: transform 0.4s linear;
     transform: translate(0, calc(var(--columns-translate) * -1));
-    &:nth-of-type(3n + 2) {
-      transform: translate(0, var(--columns-translate));
+    @media (max-width: 768px) {
+      &:nth-of-type(2n + 1) {
+        transform: translate(0, var(--columns-translate));
+      }
+    }
+    @media (min-width: 769px) {
+      &:nth-of-type(3n + 2) {
+        transform: translate(0, var(--columns-translate));
+      }
     }
   }
 `;
