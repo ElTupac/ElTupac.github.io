@@ -195,6 +195,27 @@ const videos: VideosType[] = [
     title: "Now That's What I Call Riddim",
     link: "https://www.youtube.com/watch?v=cU5_TzSBkvg",
   },
+  {
+    image:
+      "https://i.ytimg.com/vi/GyU8jToVmI8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwLumpGcDxJfq3Ut686QmOYhu49w",
+    author: "Batukizer",
+    title: "Brazilian Samba grooves",
+    link: "https://www.youtube.com/watch?v=GyU8jToVmI8",
+  },
+  {
+    image:
+      "https://i.ytimg.com/vi/GpHRL9l0kG8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-rHm3f6eB65oVRkeo9Y1VRjw5XQ",
+    author: "Macroblank",
+    title: "ラストチャンス",
+    link: "https://www.youtube.com/watch?v=GpHRL9l0kG8&t=6s",
+  },
+  {
+    image:
+      "https://i.ytimg.com/vi/AI56OKIatU8/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIEkoUDAP&rs=AOn4CLA6x9iMNemh3wESGSfhHFzU6z543w",
+    author: "The Daily Dose",
+    title: "Sexy Pigeon",
+    link: "https://www.youtube.com/watch?v=AI56OKIatU8",
+  },
 ];
 
 export default videos;
