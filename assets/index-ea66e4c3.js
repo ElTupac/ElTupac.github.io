@@ -148,6 +148,7 @@ Error generating stack: `+i.message+`
   gap: 0.5rem;
   transition: transform 0.4s linear;
   transform: rotate3d(4, 10, 7, var(--rotatedeg));
+  will-change: transform;
   display: grid;
   grid-template-columns: repeat(3, 33%);
   @media (max-width: 768px) {
@@ -157,6 +158,7 @@ Error generating stack: `+i.message+`
   & > * {
     transition: transform 0.4s linear;
     transform: translate(0, calc(var(--columns-translate) * -1));
+    will-change: transform;
     @media (max-width: 768px) {
       &:nth-of-type(2n + 1) {
         transform: translate(0, var(--columns-translate));
