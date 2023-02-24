@@ -40,6 +40,12 @@ const DescriptionWrapper = styled.section`
         margin: 0;
         line-height: 1.5;
       }
+
+      @media (max-width: 768px) {
+        top: 12%;
+        left: 5%;
+        transform: translate(0, -50%);
+      }
     }
   }
 `;
