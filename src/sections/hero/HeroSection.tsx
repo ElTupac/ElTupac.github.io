@@ -11,7 +11,7 @@ const HeroWrapper = styled.div`
     display: grid;
     position: relative;
     @media (min-width: 768px) {
-      grid-template-columns: 200px auto;
+      grid-template-columns: 250px auto;
     }
   }
 `;

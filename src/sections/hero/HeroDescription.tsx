@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import ChangingWord from "../../components/ChangingWord";
 import Word from "../../components/Word";
 import words from "../../utils/constant/words";
 
@@ -20,6 +21,26 @@ const DescriptionWrapper = styled.section`
     height: 100vh;
     overflow: hidden;
     width: 100%;
+
+    & article {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      & h2 {
+        color: #fff;
+        font-size: 2.5rem;
+        line-height: 1.1;
+        margin: 0;
+        width: min-content;
+      }
+      & p {
+        color: #aaa;
+        font-size: 1.1rem;
+        margin: 0;
+      }
+    }
   }
 `;
 
@@ -38,6 +59,14 @@ const HeroDescription: React.FC = () => (
           setOfWords.map((word) => <Word key={word}>{word}</Word>)
         )}
       </WordsBackground>
+      <article>
+        <h2>( ͡❛ ͜ʖ͡❛ ) ElTupac</h2>
+        <ChangingWord
+          words={["Developer", "Desarrollador", "Desenvolvedor", "开发人"]}
+          duration={150}
+          delay={1500}
+        />
+      </article>
     </div>
   </DescriptionWrapper>
 );
