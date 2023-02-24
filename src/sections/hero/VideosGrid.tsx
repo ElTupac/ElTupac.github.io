@@ -12,7 +12,7 @@ const Grid = styled.div`
   padding: 0 5%;
   max-width: 100%;
   gap: 0.5rem;
-  transition: transform 0.4s linear;
+  transition: transform 0.2s linear;
   transform: rotate3d(4, 10, 7, var(--rotatedeg));
   will-change: transform;
   display: grid;
@@ -22,7 +22,7 @@ const Grid = styled.div`
   }
 
   & > * {
-    transition: transform 0.4s linear;
+    transition: transform 0.2s linear;
     transform: translate(0, calc(var(--columns-translate) * -1));
     will-change: transform;
     @media (max-width: 768px) {
