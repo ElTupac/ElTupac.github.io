@@ -150,6 +150,12 @@ Error generating stack: `+i.message+`
         margin: 0;
         line-height: 1.5;
       }
+
+      @media (max-width: 768px) {
+        top: 12%;
+        left: 5%;
+        transform: translate(0, -50%);
+      }
     }
   }
 `,wh=Be.div`
@@ -193,7 +199,6 @@ Error generating stack: `+i.message+`
   position: relative;
   background-color: #1a1a1a;
 `,xh=Be.div`
-  padding: 0 5%;
   max-width: 100%;
   gap: 0.5rem;
   transition: transform 0.2s linear;
@@ -201,8 +206,10 @@ Error generating stack: `+i.message+`
   will-change: transform;
   display: grid;
   grid-template-columns: repeat(3, 33%);
+  padding: 0 5%;
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 50%);
+    padding: 0 5% 0 3%;
   }
 
   & > * {
