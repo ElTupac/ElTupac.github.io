@@ -32,13 +32,13 @@ const DescriptionWrapper = styled.section`
         color: #fff;
         font-size: 2.5rem;
         line-height: 1.1;
-        margin: 0;
-        width: min-content;
+        margin-bottom: 0.25rem;
       }
       & p {
         color: #aaa;
         font-size: 1.1rem;
         margin: 0;
+        line-height: 1.5;
       }
     }
   }
@@ -60,7 +60,9 @@ const HeroDescription: React.FC = () => (
         )}
       </WordsBackground>
       <article>
-        <h2>( ͡❛ ͜ʖ͡❛ ) ElTupac</h2>
+        <h2>
+          <p>( ͡🔥 ͜ʖ ͡🔥)</p>ElTupac
+        </h2>
         <ChangingWord
           words={["Developer", "Desarrollador", "Desenvolvedor", "开发人"]}
           duration={150}
