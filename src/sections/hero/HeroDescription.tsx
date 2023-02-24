@@ -26,6 +26,7 @@ const DescriptionWrapper = styled.section`
 const WordsBackground = styled.div`
   width: 150%;
   height: 100vh;
+  transition: transform 0.2s linear;
   transform: translate(-4%, calc(var(--words-translate) * -1));
 `;
 

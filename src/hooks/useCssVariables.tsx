@@ -27,7 +27,7 @@ const useCssVariables = () => {
           "--columns-translate": `${clamp(50 - perc, 0, 100).toFixed(1)}%`,
           "--rotatedeg": `${clamp(0.9 * (50 - perc), 0, 90).toFixed(0)}deg`,
           "--overlaysize": `${clamp(100 - perc * 3, 0, 100).toFixed(0)}%`,
-          "--words-translate": `${clamp(50 - perc, 0, 50)}%`,
+          "--words-translate": `${clamp(50 - perc, 0, 50).toFixed(1)}%`,
         };
         document.documentElement.setAttribute(
           "style",
