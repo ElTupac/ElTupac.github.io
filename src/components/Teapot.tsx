@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import useScriptFileAsString from "../hooks/useScriptFileAsString";
 import TeapotSvg from "./svg/TeapotSvg";
 import WaterFlow from "./WaterFlow";
 
@@ -25,11 +26,13 @@ const TeapotContainer = styled.section`
 `;
 
 const Teapot: React.FC = () => {
+  const scriptText = useScriptFileAsString();
+
   return (
     <TeapotContainer>
       <div className="inner-container">
         <TeapotSvg className="floating-teapot" />
-        <WaterFlow />
+        <WaterFlow>{scriptText || ""}</WaterFlow>
       </div>
     </TeapotContainer>
   );
