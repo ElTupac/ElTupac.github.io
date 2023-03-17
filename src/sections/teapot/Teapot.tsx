@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import useScriptFileAsString from "../hooks/useScriptFileAsString";
-import TeacupSvg from "./svg/TeacupSvg";
-import TeapotSvg from "./svg/TeapotSvg";
+import TeacupSvg from "../../components/svg/TeacupSvg";
+import TeapotSvg from "../../components/svg/TeapotSvg";
+import useScriptFileAsString from "../../hooks/useScriptFileAsString";
 import WaterFlow from "./WaterFlow";
 import WaterInCup from "./WaterInCup";
 
@@ -58,5 +58,4 @@ const Teapot: React.FC = () => {
     </TeapotContainer>
   );
 };
-
 export default Teapot;

@@ -1,7 +1,7 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useEffect, useRef } from "react";
-import polygonWaveGenerator from "../utils/polygonWaveGenerator";
+import polygonWaveGenerator from "../../utils/polygonWaveGenerator";
 
 export const movingTextKeyframe = keyframes`
   from {

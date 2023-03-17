@@ -6,7 +6,6 @@ const useScriptFileAsString = () => {
   useEffect(() => {
     const scripts = document.querySelectorAll("head script");
     for (const script of scripts) {
-      console.log(import.meta.env.PROD);
       if (
         script
           .getAttribute("src")
