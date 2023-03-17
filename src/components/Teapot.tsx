@@ -8,18 +8,22 @@ import WaterInCup from "./WaterInCup";
 const TeapotContainer = styled.section`
   overflow-x: hidden;
   max-width: 100vw;
-  height: 100vh;
+  height: 1000px;
   position: relative;
 
   & .inner-container {
     width: 100%;
     width: 450px;
     height: 800px;
-    position: fixed;
-    top: 0;
-    right: 50%;
-    transform: translate(50%, 0);
+    position: absolute;
+    top: 50%;
+    right: 65%;
+    transform: translate(50%, -50%);
     color: #fff;
+
+    @media (min-width: 769px) {
+      right: 50%;
+    }
 
     & .floating-teapot {
       position: absolute;

@@ -8,7 +8,7 @@ const DescriptionWrapper = styled.section`
   position: relative;
 
   @media (max-width: 768px) {
-    position: fixed;
+    position: sticky;
     max-height: 30vh;
     overflow: hidden;
     top: 0;

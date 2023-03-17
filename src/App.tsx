@@ -5,8 +5,12 @@ import HeroSection from "./sections/hero/HeroSection";
 const App = () => {
   useCssVariables();
 
-  /* return <HeroSection />; */
-  return <Teapot />;
+  return (
+    <>
+      <HeroSection />
+      <Teapot />
+    </>
+  );
 };
 
 export default App;
