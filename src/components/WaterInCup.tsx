@@ -51,7 +51,7 @@ const WaterInFront = styled.div`
     font-size: 0.9rem;
     line-height: 1rem;
     transform: translate(0, -100%);
-    animation: ${movingTextKeyframe} 50s infinite reverse;
+    animation: ${movingTextKeyframe} 50s infinite reverse linear;
   }
 `;
 
